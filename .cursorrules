@@ -1,0 +1,152 @@
+You are an expert in React 18, Remix 2, TypeScript 5, Vite 5, Shadcn UI, Tailwind CSS, and modern web development.
+
+## Key Principles
+
+1. Write performant, simple, and maintainable code that puts both user and developer experience first
+2. Favor functional programming patterns such as composition, pure functions, modularity, and immutability
+3. Use classes sparingly - only for encapsulating complex state and behaviors inside data structure patterns
+4. Write DAMP code (Descriptive And Meaningful Phrases) over clever terseness
+5. Design for loose coupling between modules and tight cohesion within them
+6. Reduce duplication without sacrificing the above principles
+
+## TypeScript
+
+1. Prefer TypeScript over JavaScript; prefer `types` over `interface`s
+2. Avoid enums; use `as const` objects instead
+3. Write descriptive identifiers following React, Remix, and TypeScript conventions
+4. Define clear `type` definitions for data structures and avoid the `any` type
+5. Use modern JavaScript features including template literals, optional chaining, and nullish coalescing
+6. Define prop types with `type Props = {}`
+7. Use `satisfies` operator for type validation
+8. Implement discriminated unions for complex state handling
+
+## React & Remix
+
+1. Choose appropriate rendering strategy (SSR, CSR, SSG) based on page requirements
+2. Use named exports for Remix loaders, actions, and components
+3. Leverage Remix's file-based routing and nested layouts for clean architecture
+4. Structure files consistently: imports, loaders/actions, then component logic
+5. Use `<Link>` for client-side navigation
+6. Implement loaders and actions for server-side data operations
+7. Write accessible code using semantic HTML and ARIA labels
+8. Configure route-based loading, error boundaries, and catch boundaries
+9. Use `useFetcher` for optimistic updates and non-blocking mutations
+10. Optimize performance through strategic resource caching
+11. Handle loader errors with `useRouteError` hook
+12. Implement pending UI with `useNavigation`
+13. Structure forms with progressive enhancement in mind
+14. Use optimistic UI for better user experience during mutations
+
+## Component Organization
+
+1. Split components when they handle multiple distinct responsibilities
+2. Organize component files: types, hooks, utility functions, then component
+3. Keep components focused on a single responsibility
+4. Place shared components in `~/components`, route-specific ones alongside routes
+5. Name components using PascalCase, files using kebab-case
+
+## Route Organization
+
+1. Use resource-based route naming (`/users`, `/users/$userId`)
+2. Keep route handlers focused on a single resource
+3. Implement nested routing for related resources
+4. Use `.server.ts` suffix for server-only code
+5. Place shared route utilities in `~/lib/utils.ts`
+
+## Data Flow
+
+1. Use loader data as single source of truth
+2. Implement optimistic updates with useFetcher
+3. Handle race conditions in concurrent updates
+4. Cache expensive computations with useMemo
+5. Implement proper revalidation strategies
+
+## State Management
+
+1. Use React state for simple, component-specific state
+2. Leverage form data for user input when possible
+3. Keep server state in loaders, avoid duplicating in client state
+4. Use `useFetcher` for server mutations outside of navigation
+5. Implement optimistic updates for better UX
+
+## Code Style
+
+1. Indent with tabs
+2. Ensure clean code with no trailing whitespace
+3. Use double quotes for string literals
+4. Place imports in correct order (see Import Order section)
+5. Use consistent naming patterns across the codebase
+
+## Form Handling
+
+1. Use progressive enhancement with native form submission
+2. Implement client-side validation for immediate feedback
+3. Add server-side validation in actions
+4. Handle errors at field and form levels
+5. Show loading states during submission
+6. Implement optimistic UI for better user experience
+
+## Import Order
+
+1. Remix core modules
+   import { json } from "@remix-run/node"
+2. React and other core libraries
+   import { useState } from "react"
+3. Third-party packages
+   import { format } from "date-fns"
+4. Application-specific imports
+   import { cn } from "~/lib/utils"
+5. Environment-specific imports
+   import { ENV } from "~/env.server"
+6. Relative path imports
+   import { UserCard } from "../components/user-card"
+
+## File Naming
+
+1. Use kebab-case for all files (e.g., `user-profile.tsx`)
+2. Use `.tsx` for React components
+3. Use `.ts` for utilities, types, and configurations
+4. Use `root.tsx` for the root layout
+
+## UI and Styling
+
+1. Use Tailwind CSS for utility-first styling
+2. Use Shadcn UI components for pre-built, customizable elements
+3. Import Shadcn UI components from `~/components/ui`
+4. Organize Tailwind classes with the `cn()` utility from `~/lib/utils.ts`
+
+## Error Handling and Validation
+
+1. Implement error boundaries for catching unexpected errors
+2. Use custom error handling within loaders and actions
+3. Validate user input on both client and server using formData or JSON
+
+## Testing
+
+1. Use `@testing-library/react` for component testing
+2. Write tests for loaders and actions ensuring data correctness
+3. Mock fetch requests and responses where applicable
+
+## Performance Optimization
+
+1. Use `<Link prefetch="intent">` for faster navigation
+2. Defer non-essential JavaScript using `<Scripts defer />`
+3. Optimize nested layouts to minimize re-rendering
+4. Leverage Remix's built-in caching and data revalidation
+
+## Security
+
+1. Prevent XSS by sanitizing user-generated content
+2. Use Remix's CSRF protection for form submissions
+3. Handle sensitive data on the server, never expose in client code
+
+## Reference
+
+1. Remix Official Documentation: https://remix.run/docs
+2. TypeScript Handbook: https://www.typescriptlang.org/docs/handbook
+3. Shadcn UI Documentation: https://ui.shadcn.com
+4. Tailwind CSS Documentation: https://tailwindcss.com/docs
+5. React Documentation: https://react.dev
+6. Testing Library Documentation: https://testing-library.com/docs
+7. Web Content Accessibility Guidelines (WCAG): https://www.w3.org/WAI/standards-guidelines/wcag
+8. React Router Documentation: https://reactrouter.com/docs/en/v6
