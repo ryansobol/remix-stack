@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"biomejs.biome",
+		"etsi0.class-collapse",
+		"kamikillerto.vscode-colorize",
+		"quicktype.quicktype",
+		"yoavbls.pretty-ts-errors",
+		"bradlc.vscode-tailwindcss",
+		"vitest.explorer"
+	]
+}

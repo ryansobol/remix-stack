@@ -1,0 +1,43 @@
+{
+	"[html]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[svelte]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[tailwindcss]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"biome.enabled": false,
+	"class-collapse.functionality.enable": false,
+	"colorize.languages": ["javascript", "svelte"],
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"tailwindCSS.experimental.classRegex": [
+		["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+		["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+	],
+	"tailwindCSS.includeLanguages": {
+		"svelte": "html"
+	}
+}
