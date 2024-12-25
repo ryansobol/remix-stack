@@ -1,4 +1,5 @@
 .DS_Store
+.devbox
 .env
 *.log
 build
